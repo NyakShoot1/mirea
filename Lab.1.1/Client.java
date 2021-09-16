@@ -19,4 +19,13 @@ public class Client extends AbstractPerson {
     public String think() {
         return "I'm a client";
     }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "name=" + this.name +
+                ", service='" + service + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

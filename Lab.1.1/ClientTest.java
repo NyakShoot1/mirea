@@ -6,5 +6,7 @@ public class ClientTest {
         var client1 = new Client("Petrovich","КрасноеБелое",10f);
 
         System.out.println(client1.think());
+
+        System.out.println(client1);
     }
 }
