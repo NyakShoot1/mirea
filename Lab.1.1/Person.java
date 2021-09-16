@@ -8,6 +8,7 @@ public class Person
     private int age;
     private float height;
     private String name;
+
     private boolean isNameValid = false;
     private boolean isAgeValid = false;
     private boolean isHeightValid = false;
@@ -17,7 +18,8 @@ public class Person
     public void setAge(int age) {
         this.age = age;
 
-        isAgeValid = true;
+        if (age < MAX_AGE)
+            isAgeValid = true;
     }
 
     public void setName(String name) {
@@ -29,14 +31,21 @@ public class Person
     public void setHeight(float height) {
         this.height = height;
 
-        isHeightValid = true;
+        if(height < MAX_HEIGHT)
+            isHeightValid = true;
     }
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
-    public int getAge() { return age; }
+    public int getAge() {
+        return age;
+    }
 
-    public float getHeight() { return height; }
+    public float getHeight() {
+        return height;
+    }
 
     public void info() {
         if(isValid())
@@ -53,5 +62,7 @@ public class Person
                 ", name='" + name + '\'' + '}';
     }
 
-    public boolean isValid() { return isAgeValid && isHeightValid && isNameValid; }
+    public boolean isValid() {
+        return isAgeValid && isHeightValid && isNameValid;
+    }
 }

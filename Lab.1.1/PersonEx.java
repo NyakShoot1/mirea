@@ -3,16 +3,18 @@ package com.company;
 import java.lang.Exception;
 
 public class PersonEx{
+
     private final int MAX_AGE = 200;
-
     private final double MAX_HEIGHT = 3;
-    private int age;
 
+    private int age;
     private float height;
     private String name;
+
     private boolean isNameValid = false;
     private boolean isAgeValid = false;
     private boolean isHeightValid = false;
+
     private Gender gender;
 
     public enum Gender {
@@ -26,11 +28,15 @@ public class PersonEx{
         private final int value;
         private final String strValue;
 
-        public int getValue() { return value; }
-        public String getStrValue() { return strValue; }
+        public int getValue() {
+            return value;
+        }
+        public String getStrValue() {
+            return strValue;
+        }
     }
 
-    PersonEx() {}
+    PersonEx(){}
 
     public void setGender(Gender gender) {
         this.gender = gender;
@@ -60,11 +66,17 @@ public class PersonEx{
         isHeightValid = true;
     }
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
-    public int getAge() { return age; }
+    public int getAge() {
+        return age;
+    }
 
-    public float getHeight() { return height; }
+    public float getHeight() {
+        return height;
+    }
 
     public void info() {
         if(isValid())

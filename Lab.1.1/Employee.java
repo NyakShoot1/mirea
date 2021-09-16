@@ -16,5 +16,16 @@ public final class Employee extends AbstractPerson {
     }
 
     @Override
-    public String think() { return "I'm a employee"; }
+    public String think() {
+        return "I'm a employee";
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name=" + this.name +
+                ", department='" + department + '\'' +
+                ", position=" + position +
+                '}';
+    }
 }
