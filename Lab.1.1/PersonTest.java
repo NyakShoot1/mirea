@@ -19,6 +19,7 @@ public class PersonTest
         person1.info();
 
         person1.setAge(201);
+        person1.setHeight(201f);
 
         person1.info();
     }
