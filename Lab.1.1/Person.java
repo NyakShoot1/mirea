@@ -20,6 +20,8 @@ public class Person
 
         if (age < MAX_AGE)
             isAgeValid = true;
+        else
+            isAgeValid = false;
     }
 
     public void setName(String name) {
@@ -33,6 +35,8 @@ public class Person
 
         if(height < MAX_HEIGHT)
             isHeightValid = true;
+        else
+            isHeightValid = false;
     }
 
     public String getName() {

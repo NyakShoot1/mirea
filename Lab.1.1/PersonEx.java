@@ -43,7 +43,7 @@ public class PersonEx{
     }
 
     public void setAge(int age) throws IllegalAssignmentException {
-        if(age < 0)
+        if(age < 0 || age > MAX_AGE)
             throw new IllegalAssignmentException("Age is invalid");
 
         this.age = age;
@@ -59,7 +59,7 @@ public class PersonEx{
     }
 
     public void setHeight(float height) throws IllegalAssignmentException {
-        if(height >= MAX_HEIGHT || height < 0)
+        if(height > MAX_HEIGHT || height < 0)
             throw new IllegalAssignmentException("Height is invalid");
 
         this.height = height;
