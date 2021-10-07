@@ -8,23 +8,24 @@ class Football extends JFrame
 {
     int milan = 0;
     int rm = 0;
+
     JLabel res = new JLabel("Result: 0 X 0");
     JLabel last = new JLabel("Last Scorer: N/A");
     JLabel win = new JLabel("Winner: DRAW");
     JButton button1 = new JButton("AC Milan");
     JButton button2 = new JButton("Real Madrid");
-    Font fnt = new Font("Times new roman",Font.BOLD,20);
+
     Football() {
         super("Football");
         setLayout(new FlowLayout());
-        setSize(350,400);
+        setSize(350,200);
         add(res);
         add(last);
         add(win);
         add(button1);
         add(button2);
-button1.addActionListener(new ActionListener()  //AC Milan
-    {
+        button1.addActionListener(new ActionListener()  //AC Milan
+             {
         public void actionPerformed(ActionEvent ae)
         {
             milan+=1;
