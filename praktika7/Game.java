@@ -29,7 +29,7 @@ public class Game
             s.push(newS.pop());
     }
 
-    public String play()
+    public String startGame()
     {
         int turn = 0;
 
@@ -66,9 +66,8 @@ public class Game
 
     public static void main(String[] args)
     {
-        System.out.println(new Game("13579", "24680").play());
-        System.out.println(new Game("12345", "67490").play());
-        System.out.println(new Game("14139", "46234").play());
+        System.out.println(new Game("13579", "24680").startGame());
+        System.out.println(new Game("12345", "67490").startGame());
+        System.out.println(new Game("14139", "46234").startGame());
     }
-
 }
