@@ -67,7 +67,5 @@ public class Game
     public static void main(String[] args)
     {
         System.out.println(new Game("13579", "24680").startGame());
-        System.out.println(new Game("12345", "67490").startGame());
-        System.out.println(new Game("14139", "46234").startGame());
     }
 }
