@@ -7,14 +7,12 @@ public class MyArrayList<E>
     private int count;
     private E[] myArrayList;
 
-    // конструктор
     public MyArrayList(Class type, int size)
     {
         count = 0;
         myArrayList = (E[]) Array.newInstance(type, size);
     }
 
-    // метод расширения
     private void expand(Class type,  int size)
     {
         E[] newMyArrayList = (E[]) Array.newInstance(type, size);
@@ -25,9 +23,6 @@ public class MyArrayList<E>
             myArrayList[i] = newMyArrayList[i];
     }
 
-
-
-    // метод добавления элемента в конец списка
     public void add(E item)
     {
         if(count == myArrayList.length)
@@ -39,7 +34,6 @@ public class MyArrayList<E>
 
     }
 
-    // метод добавления элемента в середину списка, со смещением всех оставшихся вправо
     public void add(E item, int index)
     {
         if(count == myArrayList.length - 1)
@@ -55,7 +49,6 @@ public class MyArrayList<E>
 
     }
 
-    // метод удаления всех элементов
     public void clear()
     {
         for(int i = 0; i < count; i++)
@@ -65,7 +58,6 @@ public class MyArrayList<E>
         count = 0;
     }
 
-    // метод проверяет, является список пустым или нет
     public boolean isEmpty()
     {
         if(count == 0)
@@ -74,20 +66,18 @@ public class MyArrayList<E>
             return false;
     }
 
-    // метод возвращает число заполненных элементов
     public int size()
     {
         return count;
     }
-
-    // метод возвращает все элементы через запятую в виде строки
+    
     public String toString()
     {
         String answ = "";
 
             for (int i = 0; i < count; i++) {
                 if(answ == "")
-                    answ = "There are these elements in list: " + myArrayList[i];
+                    answ = "В списке есть элементы: " + myArrayList[i];
                 else
                 answ = answ + ", " + myArrayList[i];
             }
