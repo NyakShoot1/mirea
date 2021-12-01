@@ -1,0 +1,52 @@
+package ru.mirea;
+
+public class MovablePoint implements Movable {
+
+    protected int x;
+    protected int y;
+    protected int xSpeed;
+    protected int ySpeed;
+
+    public MovablePoint (int x, int y, int xSpeed, int ySpeed) {
+        this.x = x;
+        this.y = y;
+        this.xSpeed = xSpeed;
+        this.ySpeed = ySpeed;
+    }
+
+    @Override
+    public Movable clone()
+    {
+        return new MovablePoint(this.x, this.y,this.xSpeed,this.ySpeed);
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Point (" + x + ", " + y + ")";
+    }
+
+    @Override
+    public void moveUp()
+    {
+        y++;
+    }
+
+    @Override
+    public void moveDown()
+    {
+        y--;
+    }
+
+    @Override
+    public void moveRight()
+    {
+        x++;
+    }
+
+    @Override
+    public void moveLeft()
+    {
+        x--;
+    }
+}
